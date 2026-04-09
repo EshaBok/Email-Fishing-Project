@@ -19,10 +19,13 @@ def scan_email_for_fraud(email):
       if word in email:
          score += 6
    return score
+   
+if __name__ == "__main__":
+   email = input("Copy and enter the email content: ")
+   emailscore = scan_email_for_fraud(email)
+   if emailscore >= 15:
+      print("This email is likely to be fraudulent.")
+   else:
+      print("This email is likely to be safe.")
 
-email = input("Copy and enter the email content: ")
-emailscore = scan_email_for_fraud(email)
-if emailscore >= 15:
-   print("This email is likely to be fraudulent.")
-else:   print("This email is likely to be safe.")
 
