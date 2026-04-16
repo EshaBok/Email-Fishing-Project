@@ -1,3 +1,5 @@
+import re
+
 fraud_words = ["urgent", "action required", "free", "congradulations"]
 urgency_words = ["Now", "Urgency", "Deadline", "immediately", "fast", "act now", "hurry", "quick"]
 financial_words = ["money", "cash", "prize", "winner", "lottery", "inheritance", "account", "invoice", "transfer"]
@@ -27,6 +29,7 @@ def extracting_domain(email):
    else:
       return None
 
+
 if __name__ == "__main__":
    email = input("Copy and enter the email content: ")
    emailscore = scan_email_for_fraud(email)
@@ -34,5 +37,7 @@ if __name__ == "__main__":
       print("This email is likely to be fraudulent.")
    else:
       print("This email is likely to be safe.")
+
+
 
 
