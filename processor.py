@@ -10,3 +10,5 @@ domain = re.search(r'[\w\.-]+@([\w\.-]+)', df['sender'][0])
 print(domain.group(1))
 
 df['domain'] = df['sender'].apply(extracting_domain)
+print(df[['sender', 'domain']].head(20))
+    
